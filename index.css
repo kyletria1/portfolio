@@ -11,7 +11,6 @@ body {
   line-height: 1.5;
 }
 
-/* header */
 .header {
   background-color: #0000AA;
   padding: 1rem 2rem;
@@ -32,7 +31,6 @@ body {
   color: #FFFFFF;
 }
 
-/* hero */
 .hero {
   padding: 4rem 3rem 2rem;
   text-align: center;
@@ -49,7 +47,6 @@ body {
   color: #0000AA;
 }
 
-/* image placeholder */
 .media-placeholder {
   display: block;
   margin: 2rem auto;
@@ -59,9 +56,11 @@ body {
   background-color: #0000AA;
 }
 
-/* about blurb */
 .about-blurb {
-  padding: 1rem 2rem 4rem;
+  max-width: 900px;
+  width: calc(100% - 4rem);
+  margin: 0 auto;
+  padding: 1rem 0 4rem;
 }
 
 .about-blurb__text {
@@ -75,7 +74,6 @@ body {
   color: #0000AA;
 }
 
-/* footer */
 .footer {
   background-color: #0000AA;
   padding: 3rem 2rem 2rem;
@@ -88,7 +86,7 @@ body {
 
 .footer-about {
   flex: 1 1 auto;
-  max-width: 500px;
+  max-width: 340px;
 }
 
 .footer-about__heading {
@@ -99,7 +97,7 @@ body {
 }
 
 .footer-about__body {
-  font-size: 1rem;
+  font-size: 0.5rem;
   color: #FFFFFF;
   line-height: 1.5;
   margin-bottom: 0.5rem;
@@ -107,7 +105,7 @@ body {
 }
 
 .footer-about__contact {
-  font-size: 1rem;
+  font-size: 0.5rem;
   color: #FFFFFF;
   opacity: 0.9;
 }
@@ -153,6 +151,23 @@ body {
   text-decoration: underline;
 }
 
+.header__nav {
+  text-decoration: none;
+}
+
+.footer-portfolio__item a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.footer-portfolio__item a:hover {
+  text-decoration: underline;
+}
+
+.footer-about__social-placeholder {
+  display: block;
+}
+
 /* tablet */
 @media (max-width: 768px) {
   .header { padding: 1rem 1.5rem; }
@@ -160,7 +175,7 @@ body {
   .hero { padding: 2.5rem 1.5rem 1.5rem; }
   .hero__heading { font-size: 1.5rem; }
   .media-placeholder { width: calc(100% - 3rem); }
-  .about-blurb { padding: 1rem 1.5rem 3rem; }
+  .about-blurb { width: calc(100% - 3rem); padding: 1rem 0 3rem; }
   .about-blurb__text { font-size: 1.5rem; }
   .footer {
     padding: 2.5rem 1.5rem 2rem;
@@ -178,7 +193,7 @@ body {
   .hero { padding: 2rem 1rem 1rem; }
   .hero__heading { font-size: 1.5rem; text-align: left; }
   .media-placeholder { width: calc(100% - 2rem); }
-  .about-blurb { padding: 1rem 1rem 2.5rem; }
+  .about-blurb { width: calc(100% - 2rem); padding: 1rem 0 2.5rem; }
   .about-blurb__text { font-size: 1rem; }
   .footer { padding: 2rem 1rem 1.5rem; }
 }
