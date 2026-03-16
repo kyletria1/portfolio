@@ -1,3 +1,142 @@
-h1 {
-    font-family: Poppins;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F9F9F9;
+  color: #101820;
+  line-height: 1.5;
+}
+
+.header {
+  background-color: #0000AA;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.header__nav {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #0000AA;
+  padding: 3rem 2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-about {
+  flex: 1 1 auto;
+  max-width: 500px;
+}
+
+.footer-about__heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.footer-about__body {
+  font-size: 1rem;
+  color: #FFFFFF;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.footer-about__contact {
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+
+.footer-about__social {
+  margin-top: 1.5rem;
+}
+
+.footer-about__social-placeholder {
+  width: 2rem;
+  height: 2rem;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+}
+
+.footer-portfolio {
+  flex: 0 1 auto;
+}
+
+.footer-portfolio__heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.footer-portfolio__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 2rem;
+  list-style: none;
+}
+
+.footer-portfolio__item {
+  font-size: 1rem;
+  color: #FFFFFF;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.footer-portfolio__item:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.footer-portfolio__item a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.footer-portfolio__item a:hover {
+  text-decoration: underline;
+}
+
+.footer-about__social-placeholder {
+  display: block;
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  .header { padding: 1rem 1.5rem; }
+  .header__logo { font-size: 1.5rem; }
+  .footer {
+    padding: 2.5rem 1.5rem 2rem;
+    flex-direction: column;
+  }
+  .footer-about { max-width: 100%; }
+  .footer-portfolio { width: 100%; }
+}
+
+/* mobile */
+@media (max-width: 480px) {
+  .header { padding: 1rem; }
+  .header__logo { font-size: 1.5rem; }
+  .header__nav { font-size: 1rem; }
+  .footer { padding: 2rem 1rem 1.5rem; }
 }
