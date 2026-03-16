@@ -61,9 +61,7 @@ body {
 
 /* about blurb */
 .about-blurb {
-  padding: 1rem 3rem 4rem;
-  max-width: 960px;
-  margin: 0 auto;
+  padding: 1rem 2rem 4rem;
 }
 
 .about-blurb__text {
@@ -90,7 +88,7 @@ body {
 
 .footer-about {
   flex: 1 1 auto;
-  max-width: 340px;
+  max-width: 500px;
 }
 
 .footer-about__heading {
