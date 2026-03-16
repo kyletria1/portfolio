@@ -25,13 +25,13 @@ body {
 .navigation__logo {
   font-size: 2rem;
   font-weight: 800;
-  color: #FFFFFF;
+  color: #F9F9F9;
 }
 
 .navigation__link {
   font-size: 1rem;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #F9F9F9;
   text-decoration: none;
 }
 
@@ -53,13 +53,13 @@ body {
 .footer-about__heading {
   font-size: 1rem;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #F9F9F9;
   margin-bottom: 1rem;
 }
 
 .footer-about__body {
   font-size: 1rem;
-  color: #FFFFFF;
+  color: #F9F9F9;
   line-height: 1.5;
   margin-bottom: 0.5rem;
   opacity: 0.9;
@@ -67,7 +67,7 @@ body {
 
 .footer-about__contact {
   font-size: 1rem;
-  color: #FFFFFF;
+  color: #F9F9F9;
 }
 
 .footer-about__social {
@@ -77,8 +77,12 @@ body {
 .footer-about__social-placeholder {
   width: 2rem;
   height: 2rem;
-  background-color: #FFFFFF;
+  background-color: #F9F9F9;
   border-radius: 4px;
+}
+
+.footer-about__social-placeholder a {
+  opacity: 0;
 }
 
 .footer-portfolio {
@@ -88,8 +92,14 @@ body {
 .footer-portfolio__heading {
   font-size: 1rem;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #F9F9F9;
   margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.footer-portfolio__heading a {
+  text-decoration: none;
+  color: #F9F9F9;
 }
 
 .footer-portfolio__grid {
@@ -101,27 +111,13 @@ body {
 
 .footer-portfolio__item {
   font-size: 1rem;
-  color: #FFFFFF;
-  opacity: 0.9;
+  color: #F9F9F9;
   cursor: pointer;
-}
-
-.footer-portfolio__item:hover {
-  opacity: 1;
-  text-decoration: underline;
 }
 
 .footer-portfolio__item a {
   text-decoration: none;
-  color: #FFFFFF;
-}
-
-.footer-portfolio__item a:hover {
-  text-decoration: underline;
-}
-
-.footer-about__social-placeholder {
-  display: block;
+  color: #F9F9F9;
 }
 
 /* tablet */

@@ -1,6 +1,8 @@
 .hero {
   padding: 4rem 3rem 2rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .hero__heading {
@@ -15,7 +17,8 @@
 }
 
 .hero__image{
-  width: 73rem;
+  display: block;
+  width: 57rem;
   height: 33rem;
 }
 
