@@ -58,7 +58,7 @@ body {
 
 .about-blurb {
   max-width: 900px;
-  width: calc(100% - 4rem);
+  width: calc(150% - 4rem);
   margin: 0 auto;
   padding: 1rem 0 4rem;
 }
@@ -86,7 +86,7 @@ body {
 
 .footer-about {
   flex: 1 1 auto;
-  max-width: 340px;
+  max-width: 500px;
 }
 
 .footer-about__heading {
@@ -97,7 +97,7 @@ body {
 }
 
 .footer-about__body {
-  font-size: 0.5rem;
+  font-size: 1rem;
   color: #FFFFFF;
   line-height: 1.5;
   margin-bottom: 0.5rem;
@@ -105,9 +105,8 @@ body {
 }
 
 .footer-about__contact {
-  font-size: 0.5rem;
+  font-size: 1rem;
   color: #FFFFFF;
-  opacity: 0.9;
 }
 
 .footer-about__social {
