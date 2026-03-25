@@ -20,9 +20,7 @@
   </nav>
 
   <section class="hero">
-    <h1 class="hero__heading">
-      Hi! <span class="hero__heading--accent">I am Kyle Tria</span> and welcome to my world.
-    </h1>
+    <h1 class="hero__heading"><span>Hi! </span><span class="hero__heading--accent">I am Kyle Tria</span><span> and welcome to my world.</span></h1>
   </section>
 
   <div class="media-placeholder">
@@ -68,6 +66,24 @@
     </div>
 
   </footer>
+
+  <script>
+      gsap.registerPlugin(TextPlugin);
+
+      const spans=document.querySelectorAll(".hero__heading span");
+      const before=spans[0];
+      const accent=spans[1];
+      const after=spans[2];
+
+      before.textContent="";
+      accent.textContent="";
+      after.textContent="";
+
+      gsap.timeline()
+        .to(before, {duration:0.5, text:{value:"Hi! "}, ease:"none"})
+        .to(accent, {duration:0.8, text:{value:"I am Kyle Tria"}, ease:"none"})
+        .to(after,  {duration:1.5, text:{value:" and welcome to my world."}, ease:"none"});
+  </script>
 
 </body>
 </html>

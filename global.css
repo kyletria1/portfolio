@@ -1,3 +1,11 @@
+:root {
+  --color-dark:  #101820;
+  --color-blue:  #0000AA;
+  --color-light: #F9F9F9;
+
+  --font-body: 'Poppins', sans-serif;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,14 +13,14 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #F9F9F9;
-  color: #101820;
+  font-family: var(--font-body);
+  background-color: var(--color-light);
+  color: var(--color-dark);
   line-height: 1.5;
 }
 
 .navigation {
-  background-color: #0000AA;
+  background-color: var(--color-blue);
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
@@ -25,18 +33,36 @@ body {
 .navigation__logo {
   font-size: 2rem;
   font-weight: 800;
-  color: #F9F9F9;
+  color: var(--color-light);
 }
 
 .navigation__link {
   font-size: 1rem;
   font-weight: 700;
-  color: #F9F9F9;
+  color: var(--color-light);
   text-decoration: none;
 }
 
+.hero {
+  padding: 4rem 3rem 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__heading {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-dark);
+  line-height: 1.5;
+}
+
+.hero__heading--accent {
+  color: var(--color-blue);
+}
+
 .footer {
-  background-color: #0000AA;
+  background-color: var(--color-blue);
   padding: 3rem 2rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -53,13 +79,13 @@ body {
 .footer-about__heading {
   font-size: 1rem;
   font-weight: 700;
-  color: #F9F9F9;
+  color: var(--color-light);
   margin-bottom: 1rem;
 }
 
 .footer-about__body {
   font-size: 1rem;
-  color: #F9F9F9;
+  color: var(--color-light);
   line-height: 1.5;
   margin-bottom: 0.5rem;
   opacity: 0.9;
@@ -67,7 +93,7 @@ body {
 
 .footer-about__contact {
   font-size: 1rem;
-  color: #F9F9F9;
+  color: var(--color-light);
 }
 
 .footer-about__social {
@@ -77,7 +103,7 @@ body {
 .footer-about__social-placeholder {
   width: 2rem;
   height: 2rem;
-  background-color: #F9F9F9;
+  background-color: var(--color-light);
   border-radius: 4px;
 }
 
@@ -92,14 +118,14 @@ body {
 .footer-portfolio__heading {
   font-size: 1rem;
   font-weight: 700;
-  color: #F9F9F9;
+  color: var(--color-light);
   margin-bottom: 1rem;
   cursor: pointer;
 }
 
 .footer-portfolio__heading a {
   text-decoration: none;
-  color: #F9F9F9;
+  color: var(--color-light);
 }
 
 .footer-portfolio__grid {
@@ -111,31 +137,31 @@ body {
 
 .footer-portfolio__item {
   font-size: 1rem;
-  color: #F9F9F9;
+  color: var(--color-light);
   cursor: pointer;
 }
 
 .footer-portfolio__item a {
   text-decoration: none;
-  color: #F9F9F9;
+  color: var(--color-light);
 }
 
 /* tablet */
 @media (max-width: 768px) {
-  .header { padding: 1rem 1.5rem; }
-  .header__logo { font-size: 1.5rem; }
+  .header          { padding: 1rem 1.5rem; }
+  .header__logo    { font-size: 1.5rem; }
   .footer {
     padding: 2.5rem 1.5rem 2rem;
     flex-direction: column;
   }
-  .footer-about { max-width: 100%; }
+  .footer-about    { max-width: 100%; }
   .footer-portfolio { width: 100%; }
 }
 
 /* mobile */
 @media (max-width: 480px) {
-  .header { padding: 1rem; }
-  .header__logo { font-size: 1.5rem; }
-  .header__nav { font-size: 1rem; }
-  .footer { padding: 2rem 1rem 1.5rem; }
+  .header          { padding: 1rem; }
+  .header__logo    { font-size: 1.5rem; }
+  .header__nav     { font-size: 1rem; }
+  .footer          { padding: 2rem 1rem 1.5rem; }
 }
