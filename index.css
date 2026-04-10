@@ -1,50 +1,212 @@
-.hero__image {
-  display: block;
-  width: 57rem;
-  height: 33rem;
+.home__intro {
+  padding: 54px 48px 24px;
+  text-align: center;
 }
 
-.media-placeholder {
-  display: block;
-  margin: 2rem auto;
-  max-width: 900px;
-  width: calc(100% - 4rem);
-  aspect-ratio: 16 / 9;
-  background-color: var(--color-blue);
+.home__intro-heading {
+  font-size: 44px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.2;
 }
 
-.about-blurb {
-  max-width: 900px;
-  width: calc(150% - 4rem);
-  margin: 0 auto;
-  padding: 1rem 0 4rem;
+.home__intro-heading--accent {
+  color: var(--primary);
 }
 
-.about-blurb__text {
-  font-size: 1.5rem;
+.home__hero-img {
+  padding: 0 48px;
+}
+
+.home__hero-illustration {
+  width: 100%;
+  max-height: 400px;
+  border-radius: 6px;
+  border: 3px solid var(--primary);
+  object-fit: cover;
+}
+
+.home__bio {
+  padding: 40px 48px;
+  max-width: 860px;
+}
+
+.home__bio-text {
+  font-size: 22px;
   font-weight: 700;
-  color: var(--color-dark);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
-.about-blurb__text--accent {
-  color: var(--color-blue);
+.home__bio-text--accent {
+  color: var(--primary);
+  font-weight: 800;
 }
+
+.home__portfolio-preview {
+  padding: 0 48px 64px;
+}
+
+.home__portfolio-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.home__portfolio-heading--accent {
+  color: var(--primary);
+}
+
+
+/* CAROUSEL */
+
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.carousel__btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.carousel__btn:hover {
+  opacity: 0.5;
+}
+
+.carousel__btn .material-symbols-outlined {
+  font-size: 40px;
+  color: var(--primary);
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 48;
+}
+
+.carousel__track-wrapper {
+  overflow: hidden;
+  flex: 1;
+}
+
+.carousel__track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel__slide {
+  flex: 0 0 calc(50% - 12px);
+}
+
+.carousel__item {
+  display: block;
+  color: var(--text);
+}
+
+.carousel__item-img-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #e8e8f0;
+}
+
+.carousel__item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.carousel__item:hover .carousel__item-img {
+  transform: scale(1.03);
+}
+
+.carousel__item-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 10px;
+}
+
+.carousel__item-name {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.carousel__item-type {
+  font-size: 13px;
+  font-weight: 400;
+}
+
 
 /* tablet */
-@media (max-width: 768px) {
-  .hero                { padding: 2.5rem 1.5rem 1.5rem; }
-  .hero__heading       { font-size: 1.5rem; }
-  .media-placeholder   { width: calc(100% - 3rem); }
-  .about-blurb         { width: calc(100% - 3rem); padding: 1rem 0 3rem; }
-  .about-blurb__text   { font-size: 1.5rem; }
+@media (max-width: 900px) {
+  .home__intro {
+    padding: 40px 32px 20px;
+  }
+
+  .home__intro-heading {
+    font-size: 32px;
+  }
+
+  .home__hero-img {
+    padding: 0 32px;
+  }
+
+  .home__bio {
+    padding: 32px;
+  }
+
+  .home__bio-text {
+    font-size: 18px;
+  }
+
+  .home__portfolio-preview {
+    padding: 0 32px 48px;
+  }
 }
 
 /* mobile */
-@media (max-width: 480px) {
-  .hero                { padding: 2rem 1rem 1rem; }
-  .hero__heading       { font-size: 1.5rem; text-align: left; }
-  .media-placeholder   { width: calc(100% - 2rem); }
-  .about-blurb         { width: calc(100% - 2rem); padding: 1rem 0 2.5rem; }
-  .about-blurb__text   { font-size: 1rem; }
+@media (max-width: 560px) {
+  .home__intro {
+    padding: 32px 20px 16px;
+    text-align: left;
+  }
+
+  .home__intro-heading {
+    font-size: 26px;
+  }
+
+  .home__hero-img {
+    padding: 0 20px;
+  }
+
+  .home__bio {
+    padding: 24px 20px;
+  }
+
+  .home__bio-text {
+    font-size: 16px;
+  }
+
+  .home__portfolio-preview {
+    padding: 0 20px 40px;
+  }
+
+  .home__portfolio-heading {
+    font-size: 22px;
+  }
+
+  .carousel__slide {
+    flex: 0 0 100%;
+  }
+
+  .carousel__btn .material-symbols-outlined {
+    font-size: 32px;
+  }
 }

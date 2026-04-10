@@ -1,89 +1,161 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
-    <title>Kyle Tria</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
 
-  <nav class="navigation">
-    <span class="navigation__logo">KYLE TRIA</span>
-    <a href="portfolio.html" class="navigation__link">Portfolio</a>
-  </nav>
+  <header class="header">
+    <a href="index.html" class="header__logo" aria-label="Home">
+      <img src="#" alt="Star logo" />
+    </a>
+    <a href="portfolio.html" class="header__nav-link">Portfolio</a>
+  </header>
 
-  <section class="hero">
-    <h1 class="hero__heading"><span>Hi! </span><span class="hero__heading--accent">I am Kyle Tria</span><span> and welcome to my world.</span></h1>
-  </section>
+  <main class="home">
 
-  <div class="media-placeholder">
-    <img src="#" class="hero__image" alt="Illustration of my world.">
-  </div>
+    <section class="home__intro">
+      <h1 class="home__intro-heading">
+        Hi! <span class="home__intro-heading--accent">I am NAME</span> and welcome to my world.
+      </h1>
+    </section>
 
-  <section class="about-blurb">
-    <p class="about-blurb__text">
-      Who am I? Well... I am a designer, I am a creative, I am an artist, I am a developer,
-      I am a marketer, I am a strategist, I am concept driven, I am aesthetic based,
-      I am logical, I am playful, I am a dreamer,
-      <span class="about-blurb__text--accent">I am me.</span>
-    </p>
-  </section>
+    <section class="home__hero-img">
+      <img src="#" alt="Illustrated characters on a plate" class="home__hero-illustration" />
+    </section>
+
+    <section class="home__bio">
+      <p class="home__bio-text">
+        Who am I? Well... I am a designer, I am a creative, I am an artist, I am a developer, I am a marketer, I am a strategist, I am concept driven, I am aesthetic based, I am logical, I am playful, I am a dreamer, <strong class="home__bio-text--accent">I am me.</strong>
+      </p>
+    </section>
+
+    <section class="home__portfolio-preview">
+      <h2 class="home__portfolio-heading">
+        Want to explore <span class="home__portfolio-heading--accent">My World</span>?
+      </h2>
+
+      <div class="carousel">
+        <button class="carousel__btn carousel__btn--prev" aria-label="Previous" onclick="moveCarousel(-1)">
+          <span class="material-symbols-outlined">arrow_circle_left</span>
+        </button>
+
+        <div class="carousel__track-wrapper">
+          <div class="carousel__track" id="carouselTrack">
+
+            <div class="carousel__slide">
+              <a href="youniverse.html" class="carousel__item">
+                <div class="carousel__item-img-wrap">
+                  <img src="#" alt="Youniverse project" class="carousel__item-img" />
+                </div>
+                <div class="carousel__item-meta">
+                  <span class="carousel__item-name">Youniverse</span>
+                  <span class="carousel__item-type">UX/UI Design</span>
+                </div>
+              </a>
+            </div>
+
+            <div class="carousel__slide">
+              <a href="berrygood.html" class="carousel__item">
+                <div class="carousel__item-img-wrap">
+                  <img src="#" alt="Berry Good project" class="carousel__item-img" />
+                </div>
+                <div class="carousel__item-meta">
+                  <span class="carousel__item-name">Berry Good</span>
+                  <span class="carousel__item-type">Product Design</span>
+                </div>
+              </a>
+            </div>
+
+            <div class="carousel__slide">
+              <a href="sunnysideup.html" class="carousel__item">
+                <div class="carousel__item-img-wrap">
+                  <img src="#" alt="Sunny Side Up project" class="carousel__item-img" />
+                </div>
+                <div class="carousel__item-meta">
+                  <span class="carousel__item-name">Sunny Side Up</span>
+                  <span class="carousel__item-type">Graphic Design</span>
+                </div>
+              </a>
+            </div>
+
+            <div class="carousel__slide">
+              <a href="milkyway.html" class="carousel__item">
+                <div class="carousel__item-img-wrap">
+                  <img src="#" alt="Milky Way project" class="carousel__item-img" />
+                </div>
+                <div class="carousel__item-meta">
+                  <span class="carousel__item-name">Milky Way</span>
+                  <span class="carousel__item-type">Graphic Design</span>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="carousel__btn carousel__btn--next" aria-label="Next" onclick="moveCarousel(1)">
+          <span class="material-symbols-outlined">arrow_circle_right</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
 
   <footer class="footer">
-
-    <div class="footer-about">
-      <h2 class="footer-about__heading">About Me</h2>
-      <p class="footer-about__body">
-        I am a concept driven and aesthetic focused designer who understands how to apply
-        creativity and logic to create unique and playful brands, identities, and worldviews
-        using digital art, media, and design software.
-      </p>
-      <p class="footer-about__contact">I can be contacted through email at kyleadriantria01@gmail.com</p>
-      <div class="footer-about__social">
-        <a href="https://www.linkedin.com/in/kyle-tria-987b28381" class="footer-about__social-placeholder">
-          <img src="linkedinlogo.svg" class="footer-about__social-placeholder" alt="LinkedIn Logo">
-        </a>
-      </div>
+    
+    <div class="footer__about">
+      <h4>About Me</h4>
+      <p>I am a concept driven and aesthetic focused designer who understands how to apply creativity and logic to create unique and playful brands, identities, and worldviews using digital art, media, and design software.</p>
+      <p>I can be contacted through email at EMAIL</p>
+      <a href="#" class="footer__linkedin" aria-label="LinkedIn">
+        <img src="#" alt="LinkedIn" />
+      </a>
     </div>
 
-    <div id="portfolio" class="footer-portfolio">
-      <h2 class="footer-portfolio__heading"><a href="portfolio.html">Portfolio</a></h2>
-      <ul class="footer-portfolio__grid">
-        <li class="footer-portfolio__item"><a href="youniverse.html">Youniverse</a></li>
-        <li class="footer-portfolio__item"><a href="berrygood.html">Berry Good</a></li>
-        <li class="footer-portfolio__item"><a href="sunnysideup.html">Sunny Side Up</a></li>
-        <li class="footer-portfolio__item"><a href="milkyway.html">Milky Way</a></li>
+    <div class="footer__nav">
+      <h4>Portfolio</h4>
+      <ul class="footer__nav-list">
+        <li><a href="youniverse.html">Youniverse</a></li>
+        <li><a href="berrygood.html">Berry Good</a></li>
+        <li><a href="sunnysideup.html">Sunny Side Up</a></li>
+        <li><a href="milkyway.html">Milky Way</a></li>
       </ul>
     </div>
+    
+    <p class="footer__copy">© 2026 Your Name</p>
 
   </footer>
 
   <script>
-      gsap.registerPlugin(TextPlugin);
+    let current = 0;
 
-      const spans=document.querySelectorAll(".hero__heading span");
-      const before=spans[0];
-      const accent=spans[1];
-      const after=spans[2];
+    function getVisible() {
+      const w = window.innerWidth;
+      if (w <= 560) return 1;
+      if (w <= 900) return 2;
+      return 2;
+    }
 
-      before.textContent="";
-      accent.textContent="";
-      after.textContent="";
+    function moveCarousel(dir) {
+      const track = document.getElementById('carouselTrack');
+      const slides = track.querySelectorAll('.carousel__slide');
+      const visible = getVisible();
+      const max = slides.length - visible;
+      current = Math.max(0, Math.min(current + dir, max));
+      const slideWidth = slides[0].getBoundingClientRect().width + parseInt(getComputedStyle(track).gap || 0);
+      track.style.transform = `translateX(-${current * slideWidth}px)`;
+    }
 
-      gsap.timeline()
-        .to(before, {duration:0.5, text:{value:"Hi! "}, ease:"none"})
-        .to(accent, {duration:0.8, text:{value:"I am Kyle Tria"}, ease:"none"})
-        .to(after,  {duration:1.5, text:{value:" and welcome to my world."}, ease:"none"});
+    window.addEventListener('resize', () => {
+      current = 0;
+      document.getElementById('carouselTrack').style.transform = 'translateX(0)';
+    });
   </script>
-
-  <script src="cursor.js"></script>
 
 </body>
 </html>
