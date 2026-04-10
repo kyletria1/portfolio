@@ -1,0 +1,33 @@
+.youniverse__subheading { 
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.youniverse__link {
+  display: inline-block;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 2px solid var(--primary);
+  margin-top: 16px;
+  transition: opacity 0.2s;
+}
+
+.youniverse__link:hover {
+  opacity: 0.5;
+}
+
+
+/* tablet */
+@media (max-width: 900px) {
+  .youniverse__subheading {
+    margin-top: 24px;
+  }
+}
+
+/* mobile */
+@media (max-width: 560px) {
+  .youniverse__subheading {
+    margin-top: 20px;
+  }
+}
