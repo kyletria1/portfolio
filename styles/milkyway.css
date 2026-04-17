@@ -1,0 +1,13 @@
+/* tablet */
+@media (max-width: 900px) {
+  .project-section__img {
+    margin-top: 1.25rem;
+  }
+}
+
+/* mobile */
+@media (max-width: 560px) {
+  .project-section__img {
+    margin-top: 1rem;
+  }
+}

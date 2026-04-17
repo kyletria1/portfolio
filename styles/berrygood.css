@@ -1,0 +1,20 @@
+.berrygood__second-img {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 0.25rem;
+}
+
+
+/* tablet */
+@media (max-width: 900px) {
+  .berrygood__second-img {
+    margin-top: 0.75rem;
+  }
+}
+
+/* mobile */
+@media (max-width: 560px) {
+  .berrygood__second-img {
+    margin-top: 0.625rem;
+  }
+}
