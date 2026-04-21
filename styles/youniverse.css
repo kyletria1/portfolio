@@ -1,0 +1,44 @@
+.youniverse__subheading {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.youniverse__link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  color: var(--background);
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border-radius: 3rem;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-top: 1rem;
+}
+
+.youniverse__link-btn:hover {
+  opacity: 0.5;
+}
+
+.youniverse__link {
+  color: var(--background);
+  text-decoration: none;
+}
+
+/* tablet */
+@media (max-width: 900px) {
+  .youniverse__subheading {
+    margin-top: 1.5rem;
+  }
+}
+
+/* mobile */
+@media (max-width: 560px) {
+  .youniverse__subheading {
+    margin-top: 1.25rem;
+  }
+}
