@@ -29,6 +29,32 @@
   text-decoration: none;
 }
 
+.youniverse__link-alternate__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+  color: var(--primary);
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 3rem;
+  border-radius: 3rem;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-top: 1rem;
+}
+
+.youniverse__link-alternate__btn:hover {
+  opacity: 0.5;
+}
+
+.youniverse__link-alternate {
+  color: var(--primary);
+  text-decoration: none;
+}
+
 /* tablet */
 @media (max-width: 900px) {
   .youniverse__subheading {
