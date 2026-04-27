@@ -3,6 +3,11 @@
   margin-bottom: 1rem;
 }
 
+.youniverse__link-btn, 
+.youniverse__link-alternate__btn {
+  align-self: center;
+}
+
 .youniverse__link-btn {
   display: inline-flex;
   align-items: center;
@@ -15,7 +20,6 @@
   padding: 1rem 3rem;
   border-radius: 3rem;
   border: none;
-  cursor: pointer;
   transition: opacity 0.2s;
   margin-top: 1rem;
 }
@@ -41,7 +45,6 @@
   padding: 1rem 3rem;
   border-radius: 3rem;
   border: none;
-  cursor: pointer;
   transition: opacity 0.2s;
   margin-top: 1rem;
 }
@@ -53,6 +56,11 @@
 .youniverse__link-alternate {
   color: var(--primary);
   text-decoration: none;
+}
+
+.youniverse__quote{
+  margin-top: 1.5rem;
+  font-weight: 700;
 }
 
 /* tablet */
