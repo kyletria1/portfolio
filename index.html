@@ -10,6 +10,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 <body>
 
@@ -134,6 +135,73 @@
     <p class="footer__copy">© 2026 Kyle Tria</p>
 
   </footer>
+
+  <script src="cursor.js"></script>
+
+  <script>
+    function typeElement(element, delay = 0) {
+      const text = element.textContent;
+      element.textContent = "";
+      element.style.visibility = "visible";
+      const chars = text.split("");
+      chars.forEach((char, i) => {
+        const span = document.createElement("span");
+        span.textContent = char;
+        span.style.opacity = 0;
+        element.appendChild(span);
+        gsap.to(span, { opacity: 1, duration: 0, delay: delay + i * 0.05 });
+      });
+      return delay + chars.length * 0.05;
+    }
+
+    const heading = document.querySelector(".home__intro-heading");
+    const accent = document.querySelector(".home__intro-heading--accent");
+
+    const before = document.createTextNode("");
+    const after = document.createTextNode("");
+    heading.innerHTML = "";
+    heading.appendChild(before);
+    heading.appendChild(accent);
+    heading.appendChild(after);
+
+    before.textContent = "Hi! ";
+    accent.textContent = "I am Kyle Tria";
+    after.textContent = " and welcome to my world.";
+
+    // Type each part
+    function typeTextNode(node, delay) {
+      const text = node.textContent;
+      node.textContent = "";
+      const frag = document.createDocumentFragment();
+      let count = 0;
+      text.split("").forEach((char, i) => {
+        const span = document.createElement("span");
+        span.textContent = char;
+        span.style.opacity = 0;
+        frag.appendChild(span);
+        gsap.to(span, { opacity: 1, duration: 0, delay: delay + i * 0.05 });
+        count = i + 1;
+      });
+      node.parentNode.insertBefore(frag, node);
+      node.parentNode.removeChild(node);
+      return delay + count * 0.05;
+    }
+
+    const beforeSpan = document.createElement("span");
+    beforeSpan.textContent = "Hi! ";
+    const afterSpan = document.createElement("span");
+    afterSpan.textContent = " and welcome to my world.";
+
+    heading.innerHTML = "";
+    heading.appendChild(beforeSpan);
+    heading.appendChild(accent);
+    heading.appendChild(afterSpan);
+
+    let t = 0;
+    t = typeElement(beforeSpan, t);
+    t = typeElement(accent, t);
+    typeElement(afterSpan, t);
+  </script>
 
   <script>
     let current = 0;

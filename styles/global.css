@@ -227,6 +227,12 @@ p {
   margin-bottom: 0.5rem;
 }
 
+.project-header__title-alternate {
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
 .project-header__subtitle {
   text-align: center;
   font-size: 0.9rem;
