@@ -191,7 +191,6 @@ p {
   align-items: center;
   background: none;
   border: none;
-  cursor: pointer;
   font-family: var(--font);
   color: var(--text);
   padding: 0;
@@ -281,12 +280,15 @@ p {
 }
 
 .project-section__body {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
 .project-section__img {
   width: 100%;
   margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .project-footer-cta {
@@ -307,7 +309,6 @@ p {
   padding: 1rem 3rem;
   border-radius: 3rem;
   border: none;
-  cursor: pointer;
   transition: opacity 0.2s;
   text-decoration: none;
 }
