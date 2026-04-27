@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/portfolio.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="header__logo" aria-label="Home">
+      <img src="assets/Logo.svg" alt="Personal Branding Logo"></img>
+    </a>
+    <a href="portfolio.html" class="header__nav-link">Portfolio</a>
+  </header>
+
+  <main class="portfolio">
+
+    <div class="portfolio__page-header">
+      <button class="back-btn" onclick="history.back()">
+        <span class="material-symbols-outlined">arrow_back</span>
+      </button>
+      <h1 class="portfolio__heading">
+        This is <span class="portfolio__heading--accent">My Portfolio</span> of my design projects!
+      </h1>
+    </div>
+
+    <div class="portfolio__grid">
+
+      <!-- When adding project remove onclick="return false;" and properly fill in alt="" -->
+      <a href="#" onclick="return false;" class="portfolio__item">
+        <div class="portfolio__item-img-wrap">
+          <img src="assets/Portfolio Placeholder Card.svg" alt="" class="portfolio__item-img" />
+        </div>
+        <div class="portfolio__item-meta">
+          <span class="portfolio__item-name">Coming Soon</span>
+          <span class="portfolio__item-type">To Be Announced</span>
+        </div>
+      </a>
+
+      <a href="youniverse.html" class="portfolio__item">
+        <div class="portfolio__item-img-wrap">
+          <img src="assets/Youniverse Project Card Image.png" alt="Youniverse project" class="portfolio__item-img" />
+        </div>
+        <div class="portfolio__item-meta">
+          <span class="portfolio__item-name">Youniverse</span>
+          <span class="portfolio__item-type">UX/UI Design</span>
+        </div>
+      </a>
+
+      <a href="berrygood.html" class="portfolio__item">
+        <div class="portfolio__item-img-wrap">
+          <img src="assets/Berry Good Project Card Image.png" alt="Berry Good project" class="portfolio__item-img" />
+        </div>
+        <div class="portfolio__item-meta">
+          <span class="portfolio__item-name">Berry Good</span>
+          <span class="portfolio__item-type">Product Design</span>
+        </div>
+      </a>
+
+      <a href="sunnysideup.html" class="portfolio__item">
+        <div class="portfolio__item-img-wrap">
+          <img src="assets/Sunny Side Up Project Card Image.png" alt="Sunny Side Up project" class="portfolio__item-img" />
+        </div>
+        <div class="portfolio__item-meta">
+          <span class="portfolio__item-name">Sunny Side Up</span>
+          <span class="portfolio__item-type">Graphic Design</span>
+        </div>
+      </a>
+
+      <a href="milkyway.html" class="portfolio__item">
+        <div class="portfolio__item-img-wrap">
+          <img src="assets/Milky Way Project Card Image.png" alt="Milky Way project" class="portfolio__item-img" />
+        </div>
+        <div class="portfolio__item-meta">
+          <span class="portfolio__item-name">Milky Way</span>
+          <span class="portfolio__item-type">Graphic Design</span>
+        </div>
+      </a>
+
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__about">
+      <h4>About Me</h4>
+      <p>I am a concept driven and aesthetic focused designer who understands how to apply creativity and logic to create unique and playful brands, identities, and worldviews using digital art, media, and design software.</p>
+      <p>I can be contacted through email at kyleadriantria01@gmail.com</p>
+      <a href="https://www.linkedin.com/in/kyle-tria-987b28381" class="footer__linkedin" aria-label="LinkedIn">
+        <img src="assets/LinkedIn Logo.svg" alt="LinkedIn" />
+      </a>
+    </div>
+
+    <div class="footer__nav">
+      <h4>Portfolio</h4>
+      <ul class="footer__nav-list">
+        <li><a href="youniverse.html">Youniverse</a></li>
+        <li><a href="berrygood.html">Berry Good</a></li>
+        <li><a href="sunnysideup.html">Sunny Side Up</a></li>
+        <li><a href="milkyway.html">Milky Way</a></li>
+      </ul>
+    </div>
+
+    <p class="footer__copy">© 2026 Kyle Tria</p>
+    
+  </footer>
+
+  <script src="cursor.js"></script>
+
+  <script>
+    function typeElement(element, delay = 0) {
+      const text = element.textContent;
+      element.textContent = "";
+      const chars = text.split("");
+      chars.forEach((char, i) => {
+        const span = document.createElement("span");
+        span.textContent = char;
+        span.style.opacity = 0;
+        element.appendChild(span);
+        gsap.to(span, { opacity: 1, duration: 0, delay: delay + i * 0.05 });
+      });
+      return delay + chars.length * 0.05;
+    }
+
+    const heading = document.querySelector(".portfolio__heading");
+    const accent = document.querySelector(".portfolio__heading--accent");
+
+    const beforeSpan = document.createElement("span");
+    beforeSpan.textContent = "This is ";
+    const afterSpan = document.createElement("span");
+    afterSpan.textContent = " of my design projects!";
+
+    heading.innerHTML = "";
+    heading.appendChild(beforeSpan);
+    heading.appendChild(accent);
+    heading.appendChild(afterSpan);
+
+    let t = 0;
+    t = typeElement(beforeSpan, t);
+    t = typeElement(accent, t);
+    typeElement(afterSpan, t);
+  </script>
+
+</body>
+</html>

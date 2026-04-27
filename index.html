@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/index.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="header__logo" aria-label="Home">
+      <img src="assets/Logo.svg" alt="Personal Branding Logo"></img>
+    </a>
+    <a href="portfolio.html" class="header__nav-link">Portfolio</a>
+  </header>
+
+  <main class="home">
+
+    <section class="home__intro">
+      <h1 class="home__intro-heading">
+        Hi! <span class="home__intro-heading--accent">I am Kyle Tria</span> and welcome to my world.
+      </h1>
+    </section>
+
+    <section class="home__hero-img">
+      <img src="assets/Portfolio Artwork.svg" alt="Illustration of Kyle Tria's world" class="home__hero-illustration" />
+    </section>
+
+    <section class="home__bio">
+      <p class="home__bio-text">
+        Who am I? Well... I am a designer, I am a creative, I am an artist, I am a developer, I am a marketer, I am a strategist, I am concept driven, I am aesthetic based, I am logical, I am playful, I am a dreamer, <strong class="home__bio-text--accent">I am me.</strong>
+      </p>
+    </section>
+
+    <section class="home__portfolio-preview">
+      <h2 class="home__portfolio-heading">
+        Want to explore <span class="home__portfolio-heading--accent">My World</span>?
+      </h2>
+
+      <div class="carousel">
+        <button class="carousel__btn carousel__btn--prev" aria-label="Previous" onclick="moveCarousel(-1)">
+          <span class="material-symbols-outlined">arrow_circle_left</span>
+        </button>
+
+        <div class="carousel__track-wrapper">
+          <div class="carousel__track" id="carouselTrack">
+
+            <div class="carousel__slide">
+              <a href="youniverse.html" class="carousel__item">
+                <div class="carousel__item-img-wrap">
+                  <img src="assets/Youniverse Portfolio Card.png" alt="Youniverse project" class="carousel__item-img" />
+                </div>
+                <div class="carousel__item-meta">
+                  <span class="carousel__item-name">Youniverse</span>
+                  <span class="carousel__item-type">UX/UI Design</span>
+                </div>
+              </a>
+            </div>
+
+            <div class="carousel__slide">
+              <a href="berrygood.html" class="carousel__item">
+                <div class="carousel__item-img-wrap">
+                  <img src="assets/Berry Good Portfolio Card.png" alt="Berry Good project" class="carousel__item-img" />
+                </div>
+                <div class="carousel__item-meta">
+                  <span class="carousel__item-name">Berry Good</span>
+                  <span class="carousel__item-type">Product Design</span>
+                </div>
+              </a>
+            </div>
+
+            <div class="carousel__slide">
+              <a href="sunnysideup.html" class="carousel__item">
+                <div class="carousel__item-img-wrap">
+                  <img src="assets/Sunny Side Up Portfolio Card.png" alt="Sunny Side Up project" class="carousel__item-img" />
+                </div>
+                <div class="carousel__item-meta">
+                  <span class="carousel__item-name">Sunny Side Up</span>
+                  <span class="carousel__item-type">Graphic Design</span>
+                </div>
+              </a>
+            </div>
+
+            <div class="carousel__slide">
+              <a href="milkyway.html" class="carousel__item">
+                <div class="carousel__item-img-wrap">
+                  <img src="assets/Milky Way Portfolio Card.png" alt="Milky Way project" class="carousel__item-img" />
+                </div>
+                <div class="carousel__item-meta">
+                  <span class="carousel__item-name">Milky Way</span>
+                  <span class="carousel__item-type">Graphic Design</span>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="carousel__btn carousel__btn--next" aria-label="Next" onclick="moveCarousel(1)">
+          <span class="material-symbols-outlined">arrow_circle_right</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    
+    <div class="footer__about">
+      <h4>About Me</h4>
+      <p>I am a concept driven and aesthetic focused designer who understands how to apply creativity and logic to create unique and playful brands, identities, and worldviews using digital art, media, and design software.</p>
+      <p>I can be contacted through email at kyleadriantria01@gmail.com</p>
+      <a href="https://www.linkedin.com/in/kyle-tria-987b28381" class="footer__linkedin" aria-label="LinkedIn">
+        <img src="assets/LinkedIn Logo.svg" alt="LinkedIn" />
+      </a>
+    </div>
+
+    <div class="footer__nav">
+      <h4><a href="portfolio.html">Portfolio</a></h4>
+      <ul class="footer__nav-list">
+        <li><a href="youniverse.html">Youniverse</a></li>
+        <li><a href="berrygood.html">Berry Good</a></li>
+        <li><a href="sunnysideup.html">Sunny Side Up</a></li>
+        <li><a href="milkyway.html">Milky Way</a></li>
+      </ul>
+    </div>
+
+    <p class="footer__copy">© 2026 Kyle Tria</p>
+
+  </footer>
+
+  <script src="cursor.js"></script>
+
+  <script>
+    function typeElement(element, delay = 0) {
+      const text = element.textContent;
+      element.textContent = "";
+      element.style.visibility = "visible";
+      const chars = text.split("");
+      chars.forEach((char, i) => {
+        const span = document.createElement("span");
+        span.textContent = char;
+        span.style.opacity = 0;
+        element.appendChild(span);
+        gsap.to(span, { opacity: 1, duration: 0, delay: delay + i * 0.05 });
+      });
+      return delay + chars.length * 0.05;
+    }
+
+    const heading = document.querySelector(".home__intro-heading");
+    const accent = document.querySelector(".home__intro-heading--accent");
+
+    const before = document.createTextNode("");
+    const after = document.createTextNode("");
+    heading.innerHTML = "";
+    heading.appendChild(before);
+    heading.appendChild(accent);
+    heading.appendChild(after);
+
+    before.textContent = "Hi! ";
+    accent.textContent = "I am Kyle Tria";
+    after.textContent = " and welcome to my world.";
+
+    // Type each part
+    function typeTextNode(node, delay) {
+      const text = node.textContent;
+      node.textContent = "";
+      const frag = document.createDocumentFragment();
+      let count = 0;
+      text.split("").forEach((char, i) => {
+        const span = document.createElement("span");
+        span.textContent = char;
+        span.style.opacity = 0;
+        frag.appendChild(span);
+        gsap.to(span, { opacity: 1, duration: 0, delay: delay + i * 0.05 });
+        count = i + 1;
+      });
+      node.parentNode.insertBefore(frag, node);
+      node.parentNode.removeChild(node);
+      return delay + count * 0.05;
+    }
+
+    const beforeSpan = document.createElement("span");
+    beforeSpan.textContent = "Hi! ";
+    const afterSpan = document.createElement("span");
+    afterSpan.textContent = " and welcome to my world.";
+
+    heading.innerHTML = "";
+    heading.appendChild(beforeSpan);
+    heading.appendChild(accent);
+    heading.appendChild(afterSpan);
+
+    let t = 0;
+    t = typeElement(beforeSpan, t);
+    t = typeElement(accent, t);
+    typeElement(afterSpan, t);
+  </script>
+
+  <script>
+    let current = 0;
+
+    function getVisible() {
+      const w = window.innerWidth;
+      if (w <= 560) return 1;
+      if (w <= 900) return 2;
+      return 2;
+    }
+
+    function moveCarousel(dir) {
+      const track = document.getElementById('carouselTrack');
+      const slides = track.querySelectorAll('.carousel__slide');
+      const visible = getVisible();
+      const max = slides.length - visible;
+      current = Math.max(0, Math.min(current + dir, max));
+      const slideWidth = slides[0].getBoundingClientRect().width + parseInt(getComputedStyle(track).gap || 0);
+      track.style.transform = `translateX(-${current * slideWidth}px)`;
+    }
+
+    window.addEventListener('resize', () => {
+      current = 0;
+      document.getElementById('carouselTrack').style.transform = 'translateX(0)';
+    });
+  </script>
+
+</body>
+</html>
