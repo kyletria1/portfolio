@@ -1,5 +1,5 @@
 if (window.matchMedia("(pointer: coarse)").matches) {
-  throw new Error("Touch device detected, cursor script is skipped.");
+  throw new Error("Touch device detected, cursor will not display.");
 }
 
 const starElement = document.createElement("div");
