@@ -30,21 +30,21 @@ bubbleElement.innerHTML = `
 document.body.appendChild(starElement);
 document.body.appendChild(bubbleElement);
 
-const mouthEl    = starElement.querySelector(".star-cursor__mouth");
-const eyeLeftEl  = starElement.querySelector(".star-cursor__eye--left");
+const mouthEl = starElement.querySelector(".star-cursor__mouth");
+const eyeLeftEl = starElement.querySelector(".star-cursor__eye--left");
 const eyeRightEl = starElement.querySelector(".star-cursor__eye--right");
 
-const bubbleSvgEl  = bubbleElement.querySelector(".speech-bubble__svg");
+const bubbleSvgEl = bubbleElement.querySelector(".speech-bubble__svg");
 const bubbleRectEl = bubbleElement.querySelector(".speech-bubble__rect");
 const bubbleTextEl = bubbleElement.querySelector(".speech-bubble__text");
 
-let mouseX = window.innerWidth  / 2;
+let mouseX = window.innerWidth / 2;
 let mouseY = window.innerHeight / 2;
 
 let currentState = "idle";
 
 const smilePath = "M -7 9 Q 0 16 7 9";
-const grinPath  = "M -9 7 Q 0 18 9 7";
+const grinPath = "M -9 7 Q 0 18 9 7";
 const mouthPath = "M -3.5 10 A 3.5 3.5 0 1 1 3.5 10 A 3.5 3.5 0 1 1 -3.5 10";
 
 document.addEventListener("mousemove", function (e) {
@@ -52,18 +52,18 @@ document.addEventListener("mousemove", function (e) {
   mouseY = e.clientY;
 });
 
-const BUBBLE_CHAR_WIDTH = 11.5; 
-const BUBBLE_PADDING    = 44;   
-const BUBBLE_HEIGHT     = 43;  
+const BUBBLE_CHAR_WIDTH = 12; 
+const BUBBLE_PADDING = 35;   
+const BUBBLE_HEIGHT = 39;  
 
 function configureBubble(label) {
   const width = Math.round(label.length * BUBBLE_CHAR_WIDTH + BUBBLE_PADDING);
 
-  bubbleSvgEl.setAttribute("width",   width);
-  bubbleSvgEl.setAttribute("height",  BUBBLE_HEIGHT);
+  bubbleSvgEl.setAttribute("width", width);
+  bubbleSvgEl.setAttribute("height", BUBBLE_HEIGHT);
   bubbleSvgEl.setAttribute("viewBox", `0 0 ${width} ${BUBBLE_HEIGHT}`);
 
-  bubbleRectEl.setAttribute("width",  width);
+  bubbleRectEl.setAttribute("width", width);
   bubbleRectEl.setAttribute("height", BUBBLE_HEIGHT);
 
   bubbleTextEl.setAttribute("x", width / 2);
@@ -81,6 +81,7 @@ function setState(nextState, label) {
     "star-cursor--view",
     "star-cursor--soon"
   );
+
   eyeLeftEl.setAttribute("r",  "5");
   eyeRightEl.setAttribute("r", "5");
 
@@ -92,18 +93,18 @@ function setState(nextState, label) {
   } else if (nextState === "view") {
     starElement.classList.add("star-cursor--view");
     mouthEl.setAttribute("d", grinPath);
-    configureBubble(label || "VIEW!");
+    configureBubble(label || "View!");
     bubbleElement.classList.add("speech-bubble--show");
 
   } else if (nextState === "soon") {
     starElement.classList.add("star-cursor--soon");
     mouthEl.setAttribute("d", mouthPath);
-    configureBubble(label || "COMING SOON!");
+    configureBubble(label || "Coming Soon!");
     bubbleElement.classList.add("speech-bubble--show");
   }
 }
 
-const BUBBLE_GAP = 14;
+const BUBBLE_GAP = 12;
 
 function loop() {
   starElement.style.left = mouseX + "px";
