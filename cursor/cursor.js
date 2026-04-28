@@ -52,24 +52,44 @@ document.addEventListener("mousemove", function (e) {
   mouseY = e.clientY;
 });
 
-const BUBBLE_CHAR_WIDTH = 12; 
-const BUBBLE_PADDING = 35;   
-const BUBBLE_HEIGHT = 39;  
+const BUBBLE_CHAR_WIDTH = 12;
+const BUBBLE_PADDING = 35;
+const BUBBLE_HEIGHT = 39;
+
+let typingTimeout = null;
 
 function configureBubble(label) {
-  const width = Math.round(label.length * BUBBLE_CHAR_WIDTH + BUBBLE_PADDING);
+  const fullWidth = Math.round(label.length * BUBBLE_CHAR_WIDTH + BUBBLE_PADDING);
 
-  bubbleSvgEl.setAttribute("width", width);
+  bubbleSvgEl.setAttribute("width", fullWidth);
   bubbleSvgEl.setAttribute("height", BUBBLE_HEIGHT);
-  bubbleSvgEl.setAttribute("viewBox", `0 0 ${width} ${BUBBLE_HEIGHT}`);
+  bubbleSvgEl.setAttribute("viewBox", `0 0 ${fullWidth} ${BUBBLE_HEIGHT}`);
 
-  bubbleRectEl.setAttribute("width", width);
+  bubbleRectEl.setAttribute("width", fullWidth);
   bubbleRectEl.setAttribute("height", BUBBLE_HEIGHT);
 
-  bubbleTextEl.setAttribute("x", width / 2);
+  bubbleTextEl.setAttribute("x", fullWidth / 2);
   bubbleTextEl.setAttribute("y", BUBBLE_HEIGHT / 2);
   bubbleTextEl.setAttribute("text-anchor", "middle");
-  bubbleTextEl.textContent = label;
+
+  if (typingTimeout) {
+    clearTimeout(typingTimeout);
+    typingTimeout = null;
+  }
+
+  bubbleTextEl.textContent = "";
+  const chars = label.split("");
+  let i = 0;
+
+  function typeNext() {
+    if (i < chars.length) {
+      bubbleTextEl.textContent += chars[i];
+      i++;
+      typingTimeout = setTimeout(typeNext, 40);
+    }
+  }
+
+  typeNext();
 }
 
 function setState(nextState, label) {
@@ -82,13 +102,19 @@ function setState(nextState, label) {
     "star-cursor--soon"
   );
 
-  eyeLeftEl.setAttribute("r",  "5");
+  eyeLeftEl.setAttribute("r", "5");
   eyeRightEl.setAttribute("r", "5");
 
   if (nextState === "idle") {
     starElement.classList.add("star-cursor--idle");
     mouthEl.setAttribute("d", smilePath);
     bubbleElement.classList.remove("speech-bubble--show");
+
+    if (typingTimeout) {
+      clearTimeout(typingTimeout);
+      typingTimeout = null;
+    }
+    bubbleTextEl.textContent = "";
 
   } else if (nextState === "view") {
     starElement.classList.add("star-cursor--view");
@@ -108,13 +134,13 @@ const BUBBLE_GAP = 12;
 
 function loop() {
   starElement.style.left = mouseX + "px";
-  starElement.style.top  = mouseY + "px";
+  starElement.style.top = mouseY + "px";
 
-  const starRadius   = (currentState === "view" || currentState === "soon") ? 39 : 30;
+  const starRadius = (currentState === "view" || currentState === "soon") ? 39 : 30;
   const bubbleHeight = Number(bubbleSvgEl.getAttribute("height")) || BUBBLE_HEIGHT;
 
   bubbleElement.style.left = mouseX + "px";
-  bubbleElement.style.top  = (mouseY - starRadius - bubbleHeight - BUBBLE_GAP) + "px";
+  bubbleElement.style.top = (mouseY - starRadius - bubbleHeight - BUBBLE_GAP) + "px";
 
   requestAnimationFrame(loop);
 }
@@ -130,26 +156,25 @@ document.querySelectorAll("[data-cursor]").forEach(function (el) {
 });
 
 document.addEventListener("mouseleave", function () {
-  starElement.style.opacity  = "0";
+  starElement.style.opacity = "0";
   bubbleElement.style.opacity = "0";
 });
 
 document.addEventListener("mouseenter", function () {
-  starElement.style.opacity  = "";
+  starElement.style.opacity = "";
   bubbleElement.style.opacity = "";
 });
-
 
 function scheduleBlink() {
   const delay = 2000 + Math.random() * 3000;
 
   setTimeout(function () {
     if (currentState !== "soon") {
-      eyeLeftEl.setAttribute("r",  "0.8");
+      eyeLeftEl.setAttribute("r", "0.8");
       eyeRightEl.setAttribute("r", "0.8");
 
       setTimeout(function () {
-        eyeLeftEl.setAttribute("r",  "5");
+        eyeLeftEl.setAttribute("r", "5");
         eyeRightEl.setAttribute("r", "5");
       }, 110);
     }
