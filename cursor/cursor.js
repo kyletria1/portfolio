@@ -11,8 +11,8 @@ starElement.innerHTML = `
       class="star-cursor__shape"
       points="0,-54 22.2,-30.4 51.3,-16.7 35.8,11.6 31.5,44.5 0,29.0 -31.5,44.5 -35.8,11.6 -51.3,-16.7 -22.2,-30.4"
     />
-    <circle class="star-cursor__eye star-cursor__eye--left"  cx="-13" cy="-6" r="5"/>
-    <circle class="star-cursor__eye star-cursor__eye--right" cx="13"  cy="-6" r="5"/>
+    <circle class="star-cursor__eye star-cursor__eye--left"  cx="-12" cy="-7" r="4"/>
+    <circle class="star-cursor__eye star-cursor__eye--right" cx="12"  cy="-7" r="4"/>
     <path class="star-cursor__mouth" d="M -7 9 Q 0 16 7 9"/>
   </svg>
 `;
