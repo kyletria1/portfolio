@@ -28,14 +28,14 @@
 }
 
 .star-cursor__shape {
-  fill: var(--color-light);
-  stroke: var(--color-blue);
+  fill: var(--background);
+  stroke: var(--primary);
   stroke-width: 7px;
   stroke-linejoin: round;
 }
 
 .star-cursor__eye {
-  fill: var(--color-blue);
+  fill: var(--primary);
 }
 
 .star-cursor__mouth {

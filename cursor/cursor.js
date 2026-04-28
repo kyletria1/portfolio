@@ -66,8 +66,8 @@ function configureBubble(label) {
   bubbleRectEl.setAttribute("width",  width);
   bubbleRectEl.setAttribute("height", BUBBLE_HEIGHT);
 
-  bubbleTextEl.setAttribute("x",           width / 2);
-  bubbleTextEl.setAttribute("y",           BUBBLE_HEIGHT / 2);
+  bubbleTextEl.setAttribute("x", width / 2);
+  bubbleTextEl.setAttribute("y", BUBBLE_HEIGHT / 2);
   bubbleTextEl.setAttribute("text-anchor", "middle");
   bubbleTextEl.textContent = label;
 }
