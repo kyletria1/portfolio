@@ -89,14 +89,15 @@
 .speech-bubble__rect {
   fill: var(--background);
   stroke: var(--primary);
-  stroke-width: 3px;
+  stroke-width: 0.3rem;
 }
 
 .speech-bubble__text {
   fill: var(--primary);
   font-family: var(--font);
-  font-size: 16px;
-  letter-spacing: 2.5px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.65;
 }
 
 @keyframes spin {
