@@ -17,9 +17,9 @@
 
   <header class="header">
     <a href="index.html" class="header__logo" aria-label="Home">
-      <img src="assets/Index/Logo.svg" alt="Personal Branding Logo"></img>
+      <img src="assets/Index/Logo.svg" alt="Personal Branding Logo" data-cursor="view" data-label="View Welcome Page?"></img>
     </a>
-    <a href="pages/portfolio.html" class="header__nav-link">Portfolio</a>
+    <a href="pages/portfolio.html" class="header__nav-link" data-cursor="view" data-label="View Portfolio?">Portfolio</a>
   </header>
 
   <main class="home">
@@ -54,7 +54,7 @@
           <div class="carousel__track" id="carouselTrack">
 
             <div class="carousel__slide">
-              <a href="pages/youniverse.html" class="carousel__item">
+              <a href="pages/youniverse.html" class="carousel__item" data-cursor="view" data-label="View Youniverse?">
                 <div class="carousel__item-img-wrap">
                   <img src="assets/Youniverse/Youniverse Portfolio Card.png" alt="Youniverse project" class="carousel__item-img" />
                 </div>
@@ -66,7 +66,7 @@
             </div>
 
             <div class="carousel__slide">
-              <a href="pages/berrygood.html" class="carousel__item">
+              <a href="pages/berrygood.html" class="carousel__item" data-cursor="view" data-label="View Berry Good?">
                 <div class="carousel__item-img-wrap">
                   <img src="assets/Berry Good/Berry Good Portfolio Card.png" alt="Berry Good project" class="carousel__item-img" />
                 </div>
@@ -78,7 +78,7 @@
             </div>
 
             <div class="carousel__slide">
-              <a href="pages/sunnysideup.html" class="carousel__item">
+              <a href="pages/sunnysideup.html" class="carousel__item" data-cursor="view" data-label="View Sunny Side Up?">
                 <div class="carousel__item-img-wrap">
                   <img src="assets/Sunny Side Up/Sunny Side Up Portfolio Card.png" alt="Sunny Side Up project" class="carousel__item-img" />
                 </div>
@@ -90,7 +90,7 @@
             </div>
 
             <div class="carousel__slide">
-              <a href="pages/milkyway.html" class="carousel__item">
+              <a href="pages/milkyway.html" class="carousel__item" data-cursor="view" data-label="View Milky Way?">
                 <div class="carousel__item-img-wrap">
                   <img src="assets/Milky Way/Milky Way Portfolio Card.png" alt="Milky Way project" class="carousel__item-img" />
                 </div>
@@ -118,18 +118,18 @@
       <h4>About Me</h4>
       <p>I am a concept driven and aesthetic focused designer who understands how to apply creativity and logic to create unique and playful brands, identities, and worldviews using digital art, media, and design software.</p>
       <p>I can be contacted through email at kyleadriantria01@gmail.com</p>
-      <a href="https://www.linkedin.com/in/kyle-tria-987b28381" class="footer__linkedin" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/kyle-tria-987b28381" class="footer__linkedin" aria-label="LinkedIn" data-cursor="view" data-label="View LinkedIn?">
         <img src="assets/Index/LinkedIn Logo.svg" alt="LinkedIn" />
       </a>
     </div>
 
     <div class="footer__nav">
-      <h4><a href="pages/portfolio.html">Portfolio</a></h4>
+      <h4><a href="pages/portfolio.html" data-cursor="view" data-label="View Portfolio?">Portfolio</a></h4>
       <ul class="footer__nav-list">
-        <li><a href="pages/youniverse.html">Youniverse</a></li>
-        <li><a href="pages/berrygood.html">Berry Good</a></li>
-        <li><a href="pages/sunnysideup.html">Sunny Side Up</a></li>
-        <li><a href="pages/milkyway.html">Milky Way</a></li>
+        <li><a href="pages/youniverse.html" data-cursor="view" data-label="View Youniverse?">Youniverse</a></li>
+        <li><a href="pages/berrygood.html" data-cursor="view" data-label="View Berry Good?">Berry Good</a></li>
+        <li><a href="pages/sunnysideup.html" data-cursor="view" data-label="View Sunny Side Up?">Sunny Side Up</a></li>
+        <li><a href="pages/milkyway.html" data-cursor="view" data-label="View Milky Way?">Milky Way</a></li>
       </ul>
     </div>
 
@@ -169,7 +169,6 @@
     accent.textContent = "I am Kyle Tria";
     after.textContent = " and welcome to my world.";
 
-    // Type each part
     function typeTextNode(node, delay) {
       const text = node.textContent;
       node.textContent = "";
