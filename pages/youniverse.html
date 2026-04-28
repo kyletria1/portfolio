@@ -6,6 +6,7 @@
   <title>Youniverse</title>
   <link rel="stylesheet" href="../styles/global.css" />
   <link rel="stylesheet" href="../styles/youniverse.css" />
+  <link rel="stylesheet" href="../cursor/cursor.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
@@ -16,15 +17,15 @@
 
   <header class="header">
     <a href="../index.html" class="header__logo" aria-label="Home">
-      <img src="../assets/Index/Logo.svg" alt="Personal Branding Logo"></img>
+      <img src="../assets/Index/Logo.svg" alt="Personal Branding Logo" data-cursor="view" data-label="View Welcome Page?"></img>
     </a>
-    <a href="../pages/portfolio.html" class="header__nav-link">Portfolio</a>
+    <a href="../pages/portfolio.html" class="header__nav-link" data-cursor="view" data-label="View Portfolio?">Portfolio</a>
   </header>
 
   <main>
 
     <div class="project-header">
-      <button class="back-btn" onclick="history.back()">
+      <button class="back-btn" onclick="history.back()" data-cursor="view" data-label="Go Back?">
         <span class="material-symbols-outlined">arrow_back</span>
       </button>
       <p class="project-header__meta">December 2025</p>
@@ -61,7 +62,7 @@
         <h3 class="project-section__heading">Ideation</h3>
         <div class="project-section__body">
           <p>Youniverse started out due to issues I was having with productivity and task tracking but could not find a system that would work for me to be able to stay productive but also not forget about my other dreams and be able to work on them too, even if the progress was small. This is where the start of Youniverse came to be: create a system where I would be able to productively work towards my dreams while making sure to stay motivated, keep things bite-sized and fun while learning about productivity. The button below will take you to the full Ideation Document of Youniverse.</p>
-          <a href="https://www.figma.com/proto/kHvgZkpNfw5is7kPDGFC3O/Youniverse?node-id=14026-5&t=9aP8aSWmjU55RQZb-1" class="youniverse__link-btn youniverse__link">Ideation Document</a>
+          <a href="https://www.figma.com/proto/kHvgZkpNfw5is7kPDGFC3O/Youniverse?node-id=14026-5&t=9aP8aSWmjU55RQZb-1" class="youniverse__link-btn youniverse__link" data-cursor="view" data-label="View Ideation Document?">Ideation Document</a>
         </div>
       </div>
     </section>
@@ -73,7 +74,7 @@
           <p>As these were projects that were either done alone or with one other partner and were done on top of our other coursework in this program, we were expected to time manage efficiently and effectively. Based on our preferences we could either do the Content Inventory and Storyboard (which since this was an app is basically a user flow) separate or do them as one deliverable. I chose to do them as one deliverable so I would get a better idea of the scale of my project as I was doing this alone.</p>
           <p>Below is a simplified version of the Content Inventory and Storyboard Document that showcases the key features of Youniverse and how they work together. The user would open Youniverse and then be prompted to sign up or log in with a Youniverse account. They would then be met with the Planet Interface where the Decorate Mode and Motivational Message Feature could be activated. In the navigation bar, the user would then be able to access the Dream Task Board, Article Library, and Settings Menu (which is also where a user would log out). Each part of the storyboard would be followed by a list of content needed if applicable hence why this is both a Content Inventory and Storyboard Document for Youniverse. The button below the Simplified Youniverse Content Inventory and Storyboard Document will take you to the full expanded version of the Youniverse Content Inventory and Storyboard Document.</p>
           <img src="../assets/Youniverse/Youniverse Content Inventory and Storyboard.svg" alt="User flow and content inventory diagram" class="project-section__img" />
-          <a href="https://www.figma.com/board/ZGsy0zT7S5NFJs3rcPBYKQ/Youniverse-Content-Inventory-and-Storyboard-Document?node-id=0-1&t=WcXnUBHh855orWYA-1" class="youniverse__link-btn youniverse__link">User Flow and Content Inventory</a>
+          <a href="https://www.figma.com/board/ZGsy0zT7S5NFJs3rcPBYKQ/Youniverse-Content-Inventory-and-Storyboard-Document?node-id=0-1&t=WcXnUBHh855orWYA-1" class="youniverse__link-btn youniverse__link" data-cursor="view" data-label="View User Flow and Content Inventory?">User Flow and Content Inventory</a>
         </div>
       </div>
     </section>
@@ -83,7 +84,7 @@
         <h3 class="project-section__heading">Style Guide</h3>
         <div class="project-section__body">
           <p>Youniverse was required to have a style guide document. The style guide featured sections on the colour scheme, typography, and various visual elements ranging from a logo, to wordmarks, and various other vector graphics. The last step before I would start my prototyping process for the Youniverse project but to complete the style guide would mean I would need to make most if not all of my visual assets before my style guide could be complete. All of the visual assets would be made using Adobe Illustrator. The following couple of sections are a few excerpts from the finalized Youniverse style guide and the button below will take you to the Youniverse Style Guide Document.</p>
-            <a href="https://www.figma.com/proto/kHvgZkpNfw5is7kPDGFC3O/Youniverse?node-id=14026-7&t=9aP8aSWmjU55RQZb-1" class="youniverse__link-btn youniverse__link">Style Guide Document</a>
+            <a href="https://www.figma.com/proto/kHvgZkpNfw5is7kPDGFC3O/Youniverse?node-id=14026-7&t=9aP8aSWmjU55RQZb-1" class="youniverse__link-btn youniverse__link" data-cursor="view" data-label="Style Guide Document?">Style Guide Document</a>
         </div>
       </div>
     </section>
@@ -149,7 +150,7 @@
           <p>The peak of this whole "Youniverse or Your Own Universe" problem came in the form of user personas. I was never required to make user personas for this project yet I made them anyways (if they were required they would have mentioned much earlier in this case study). The thing is user personas are supposed to be based on user research whether primary or secondary information but instead I had based some aspects of these user personas from myself which defeats the point of making a user persona since then I could of just referenced myself. In a way I had been so focused on making Youniverse about anything but me despite wanting this to be something for me that I created documentation that literally showed that: two users based on myself with one being a dreamer and another a doer.</p>
           <img src="../assets/Youniverse/Youniverse User Personas.svg" alt="Youniverse user personas" class="project-section__img" />
           <p>The fact that both the user personas ended up being Asian guys like me did not help as looking back on these it became clear how my confusion on the user of Youniverse was affecting my output now. The button below will show the full "user persona" document I had made for Youniverse and honestly if I had took some extra time that I did not have and found some research to back up these personas and making them more diverse, I would say these would not be so bad if I do say so myself. Fun fact I never ended up really referencing them since they were based on me if anything these two just showcased how divided and unsure I was on the direction I wanted Youniverse to take.</p>
-            <a href="https://www.figma.com/proto/kHvgZkpNfw5is7kPDGFC3O/Youniverse?node-id=63012-651&t=9aP8aSWmjU55RQZb-1" class="youniverse__link-alternate__btn youniverse__link-alternate">User Personas</a>
+            <a href="https://www.figma.com/proto/kHvgZkpNfw5is7kPDGFC3O/Youniverse?node-id=63012-651&t=9aP8aSWmjU55RQZb-1" class="youniverse__link-alternate__btn youniverse__link-alternate" data-cursor="view" data-label="View User Personas Document?">User Personas Document</a>
         </div>
       </div>
     </section>
@@ -162,7 +163,7 @@
           <p class="youniverse__quote">"You don't need to please everyone all the time as if you can't even please yourself, how can you ever please others."</p>
           <img src="../assets/Youniverse/Youniverse This is my Youniverse.svg" alt="Youniverse final presentation slide deck title card" class="project-section__img" />
           <p>The button below will take you to the view only prototype file of Youniverse which was made with Figma. I hope you enjoy seeing the final product as Youniverse means a lot to me.</p>
-            <a href="https://www.figma.com/proto/kHvgZkpNfw5is7kPDGFC3O/Youniverse?node-id=0-1&t=9aP8aSWmjU55RQZb-1" class="youniverse__link-alternate__btn youniverse__link-alternate">Youniverse Prototype</a>
+            <a href="https://www.figma.com/proto/kHvgZkpNfw5is7kPDGFC3O/Youniverse?node-id=0-1&t=9aP8aSWmjU55RQZb-1" class="youniverse__link-alternate__btn youniverse__link-alternate" data-cursor="view" data-label="View Youniverse Prototype?">Youniverse Prototype</a>
         </div>
       </div>
     </section>
@@ -186,7 +187,7 @@
     </section>
 
     <div class="project-footer-cta">
-        <a href="../pages/portfolio.html" class="project-btn">Back To Portfolio?</a>
+        <a href="../pages/portfolio.html" class="project-btn" data-cursor="view" data-label="Go Back To Portfolio?">Back To Portfolio?</a>
     </div>
 
   </main>
@@ -197,18 +198,20 @@
       <h4>About Me</h4>
       <p>I am a concept driven and aesthetic focused designer who understands how to apply creativity and logic to create unique and playful brands, identities, and worldviews using digital art, media, and design software.</p>
       <p>I can be contacted through email at kyleadriantria01@gmail.com</p>
-      <a href="https://www.linkedin.com/in/kyle-tria-987b28381" class="footer__linkedin" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/kyle-tria-987b28381" class="footer__linkedin" aria-label="LinkedIn" data-cursor="view" data-label="View LinkedIn?">
         <img src="../assets/Index/LinkedIn Logo.svg" alt="LinkedIn" />
       </a>
     </div>
-    
+
     <div class="footer__nav">
-      <h4>Portfolio</h4>
+      <h4>
+        <a href="pages/portfolio.html" data-cursor="view" data-label="View Portfolio?">Portfolio</a>
+      </h4>
       <ul class="footer__nav-list">
-        <li><a href="../pages/youniverse.html">Youniverse</a></li>
-        <li><a href="../pages/berrygood.html">Berry Good</a></li>
-        <li><a href="../pages/sunnysideup.html">Sunny Side Up</a></li>
-        <li><a href="../pages/milkyway.html">Milky Way</a></li>
+        <li><a href="../pages/youniverse.html" data-cursor="view" data-label="View Youniverse?">Youniverse</a></li>
+        <li><a href="../pages/berrygood.html" data-cursor="view" data-label="View Berry Good?">Berry Good</a></li>
+        <li><a href="../pages/sunnysideup.html" data-cursor="view" data-label="View Sunny Side Up?">Sunny Side Up</a></li>
+        <li><a href="../pages/milkyway.html" data-cursor="view" data-label="View Milky Way?">Milky Way</a></li>
       </ul>
     </div>
     
@@ -239,6 +242,7 @@
 
     const beforeSpan = document.createElement("span");
     beforeSpan.textContent = "Is this my ";
+
     const afterSpan = document.createElement("span");
     afterSpan.textContent = ", or is this Your Own Universe instead?";
 
