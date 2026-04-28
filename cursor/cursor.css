@@ -18,8 +18,8 @@
 }
 
 .star-cursor__svg {
-  width: 60px;
-  height: 60px;
+  width: 3rem;
+  height: 3rem;
   overflow: visible;
   display: block;
   transition:
@@ -28,25 +28,25 @@
 }
 
 .star-cursor__shape {
-  fill: var(--color-light);
-  stroke: var(--color-blue);
-  stroke-width: 7px;
+  fill: var(--background);
+  stroke: var(--primary);
+  stroke-width: 0.4rem;
   stroke-linejoin: round;
 }
 
 .star-cursor__eye {
-  fill: var(--color-blue);
+  fill: var(--primary);
 }
 
 .star-cursor__mouth {
   fill: none;
-  stroke: var(--color-blue);
-  stroke-width: 3.5px;
+  stroke: var(--primary);
+  stroke-width: 0.2rem;
   stroke-linecap: round;
 }
 
 .star-cursor--soon .star-cursor__mouth {
-  fill: var(--color-blue);
+  fill: var(--primary);
   stroke: none;
 }
 
@@ -55,15 +55,15 @@
 }
 
 .star-cursor--view .star-cursor__svg {
-  width: 78px;
-  height: 78px;
+  width: 4rem;
+  height: 4rem;
   animation: wiggle 1s ease-in-out infinite;
 }
 
 .star-cursor--soon .star-cursor__svg {
-  width: 74px;
-  height: 74px;
-  animation: tilt 1.4s ease-in-out infinite;
+  width: 4rem;
+  height: 4rem;
+  animation: tilt 1.2s ease-in-out infinite;
 }
 
 .speech-bubble {
@@ -87,17 +87,20 @@
 }
 
 .speech-bubble__rect {
-  fill: var(--color-light);
-  stroke: var(--color-blue);
-  stroke-width: 3px;
+  fill: var(--background);
+  stroke: var(--primary);
+  stroke-width: 0.3rem;
 }
 
 .speech-bubble__text {
-  fill: var(--color-blue);
-  font-family: var(--font-body);
-  font-size: 16px;
-  letter-spacing: 2.5px;
+  fill: var(--primary);
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.65;
 }
+
+/* animations */
 
 @keyframes spin {
   to { transform: rotate(360deg); }
@@ -105,10 +108,10 @@
 
 @keyframes wiggle {
   0%, 100% { transform: rotate(-9deg) scale(1); }
-  50%       { transform: rotate(9deg)  scale(1.06); }
+  50% { transform: rotate(9deg)  scale(1.2); }
 }
 
 @keyframes tilt {
-  0%, 100% { transform: rotate(-6deg); }
-  50%       { transform: rotate(6deg); }
+  0%, 100% { transform: rotate(-7deg); }
+  50% { transform: rotate(7deg); }
 }

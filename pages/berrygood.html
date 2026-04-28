@@ -4,27 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Berry Good</title>
-  <link rel="stylesheet" href="styles/global.css" />
-  <link rel="stylesheet" href="styles/berrygood.css" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="../styles/global.css" />
+  <link rel="stylesheet" href="../styles/berrygood.css" />
+  <link rel="stylesheet" href="../cursor/cursor.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../favicon/site.webmanifest">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 <body>
 
   <header class="header">
-    <a href="index.html" class="header__logo" aria-label="Home">
-      <img src="assets/Logo.svg" alt="Personal Branding Logo"></img>
+    <a href="../index.html" class="header__logo" aria-label="Home">
+      <img src="../assets/Index/Logo.svg" alt="Personal Branding Logo" data-cursor="view" data-label="View Welcome Page?"></img>
     </a>
-    <a href="portfolio.html" class="header__nav-link">Portfolio</a>
+    <a href="../pages/portfolio.html" class="header__nav-link" data-cursor="view" data-label="View Portfolio?">Portfolio</a>
   </header>
 
   <main>
 
     <div class="project-header">
-      <button class="back-btn" onclick="history.back()">
+      <button class="back-btn" onclick="history.back()" data-cursor="view" data-label="Go Back?">
         <span class="material-symbols-outlined">arrow_back</span>
       </button>
       <p class="project-header__meta">November 2025</p>
@@ -33,7 +34,7 @@
     </div>
 
     <div class="project-hero">
-      <img src="assets/Berry Good Project Card Image.png" alt="Berry Good Project Image" class="project-hero__img" />
+      <img src="../assets/Berry Good/Berry Good Project Card Image.png" alt="Berry Good Project Image" class="project-hero__img" />
     </div>
 
     <section class="project-section project-section--blue">
@@ -59,7 +60,7 @@
         <h3 class="project-section__heading">Ideation</h3>
         <div class="project-section__body">
           <p>For the can design concept I decided to go with açaí berry smoothies as I like açaí berry smoothies a lot and wanted to do something healthy but not a drink that is dairy focused so I landed on an açaí berry smoothie. The bear theme came with that as bears are often associated with berries along with honey and the word bear even sounds like part of the word berry so I thought it must be done. The idea to have each bear be different for each flavour variation was a way to add uniqueness for each flavour variation.</p>
-          <img src="assets/Berry Good Ideation.svg" alt="Berry Good berry classic can design flat" class="project-section__img" />
+          <img src="../assets/Berry Good/Berry Good Ideation.svg" alt="Berry Good berry classic can design flat" class="project-section__img" />
         </div>
       </div>
     </section>
@@ -69,7 +70,7 @@
         <h3 class="project-section__heading">Colour Scheme</h3>
         <div class="project-section__body">
           <p>The colour scheme compared to another very violet project known as Milky Way is supposed to be much more vibrant and compared to Milky Way so more vibrant and colourful hues were chosen. Also having a monochromatic violet colour scheme for an açaí berry smoothie is kind of a must as açaí berries are known for their deep purple hues and all their health benefits.</p>
-          <img src="assets/Berry Good Colour Scheme.svg" alt="Berry Good berry sweet can design flat" class="project-section__img" />
+          <img src="../assets/Berry Good/Berry Good Colour Scheme.svg" alt="Berry Good berry sweet can design flat" class="project-section__img" />
         </div>
       </div>
     </section>
@@ -79,7 +80,7 @@
         <h3 class="project-section__heading">Typography</h3>
         <div class="project-section__body">
           <p>The font chosen for Berry Good was Urbane Rounded in the bold font weight. I wanted a font that felt soft and playful hence why this was chosen for the project design. The thick lines combined with the curved edges makes the design be friendly which is what you would want for a fun, health drink that even kids would enjoy.</p>
-          <img src="assets/Berry Good Typography.svg" alt="Berry Good berry tropical can design flat" class="project-section__img" />
+          <img src="../assets/Berry Good/Berry Good Typography.svg" alt="Berry Good berry tropical can design flat" class="project-section__img" />
         </div>
       </div>
     </section>
@@ -89,14 +90,14 @@
         <h3 class="project-section__heading">Can Deliverables</h3>
         <div class="project-section__body">
           <p>One of the main requirements of the assignment was to make sure that design was eligible to be sold in Canada which means everything would need a French translation. Other things that would be taken into consideration would be that there would need to be a price tag, ingredients list and nutrition facts needed somewhere which means the layout of a can would need a few iterations until a final layout could be achieved. For the regular smoothie there was a plain bear, the sweet one had a smart looking bear and the tropical variation had a bear ready to go into the pool. Each design was followed with their own mockup and proof made in Adobe Photoshop and Adobe Illustrator respectively to showcase how the can would look like.</p>
-          <img src="assets/Berry Good Can Deliverables 1.png" alt="Berry Good can mockups" class="project-section__img" />
-          <img src="assets/Berry Good Can Deliverables 2.png" alt="Berry Good can proofs" class="berrygood__second-img" />
+          <img src="../assets/Berry Good/Berry Good Can Deliverables 1.png" alt="Berry Good can mockups" class="project-section__img" />
+          <img src="../assets/Berry Good/Berry Good Can Deliverables 2.png" alt="Berry Good can proofs" class="berrygood__second-img" />
         </div>
       </div>
     </section>
 
     <div class="project-footer-cta">
-        <a href="portfolio.html" class="project-btn">Back To Portfolio?</a>
+        <a href="../pages/portfolio.html" class="project-btn" data-cursor="view" data-label="Go Back To Portfolio?">Back To Portfolio?</a>
     </div>
 
   </main>
@@ -107,18 +108,20 @@
       <h4>About Me</h4>
       <p>I am a concept driven and aesthetic focused designer who understands how to apply creativity and logic to create unique and playful brands, identities, and worldviews using digital art, media, and design software.</p>
       <p>I can be contacted through email at kyleadriantria01@gamil.com</p>
-      <a href="https://www.linkedin.com/in/kyle-tria-987b28381" class="footer__linkedin" aria-label="LinkedIn">
-        <img src="assets/LinkedIn Logo.svg" alt="LinkedIn" />
+      <a href="https://www.linkedin.com/in/kyle-tria-987b28381" class="footer__linkedin" aria-label="LinkedIn" data-cursor="view" data-label="View LinkedIn?">
+        <img src="../assets/Index/LinkedIn Logo.svg" alt="LinkedIn" />
       </a>
     </div>
 
     <div class="footer__nav">
-      <h4>Portfolio</h4>
+      <h4>
+        <a href="pages/portfolio.html" data-cursor="view" data-label="View Portfolio?">Portfolio</a>
+      </h4>
       <ul class="footer__nav-list">
-        <li><a href="youniverse.html">Youniverse</a></li>
-        <li><a href="berrygood.html">Berry Good</a></li>
-        <li><a href="sunnysideup.html">Sunny Side Up</a></li>
-        <li><a href="milkyway.html">Milky Way</a></li>
+        <li><a href="../pages/youniverse.html" data-cursor="view" data-label="View Youniverse?">Youniverse</a></li>
+        <li><a href="../pages/berrygood.html" data-cursor="view" data-label="View Berry Good?">Berry Good</a></li>
+        <li><a href="../pages/sunnysideup.html" data-cursor="view" data-label="View Sunny Side Up?">Sunny Side Up</a></li>
+        <li><a href="../pages/milkyway.html" data-cursor="view" data-label="View Milky Way?">Milky Way</a></li>
       </ul>
     </div>
     
@@ -126,7 +129,7 @@
 
   </footer>
 
-  <script src="cursor.js"></script>
+  <script src="../cursor/cursor.js"></script>
 
   <script>
     function typeElement(element, delay = 0) {

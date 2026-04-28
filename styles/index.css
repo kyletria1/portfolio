@@ -20,7 +20,7 @@
 
 .home__hero-illustration {
   width: 100%;
-  max-height: 25rem;
+  max-height: auto;
   border-radius: 0.4rem;
   object-fit: cover;
 }

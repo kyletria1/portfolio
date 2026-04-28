@@ -4,27 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Milky Way</title>
-  <link rel="stylesheet" href="styles/global.css" />
-  <link rel="stylesheet" href="styles/milkyway.css" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="../styles/global.css" />
+  <link rel="stylesheet" href="../styles/milkyway.css" />
+  <link rel="stylesheet" href="../cursor/cursor.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../favicon/site.webmanifest">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 <body>
 
   <header class="header">
-    <a href="index.html" class="header__logo" aria-label="Home">
-      <img src="assets/Logo.svg" alt="Personal Branding Logo"></img>
+    <a href="../index.html" class="header__logo" aria-label="Home">
+      <img src="../assets/Index/Logo.svg" alt="Personal Branding Logo" data-cursor="view" data-label="View Welcome Page?"></img>
     </a>
-    <a href="portfolio.html" class="header__nav-link">Portfolio</a>
+    <a href="../pages/portfolio.html" class="header__nav-link" data-cursor="view" data-label="View Portfolio?">Portfolio</a>
   </header>
 
   <main>
 
     <div class="project-header">
-      <button class="back-btn" onclick="history.back()">
+      <button class="back-btn" onclick="history.back()" data-cursor="view" data-label="Go Back?">
         <span class="material-symbols-outlined">arrow_back</span>
       </button>
       <p class="project-header__meta">January 2025</p>
@@ -33,7 +34,7 @@
     </div>
 
     <div class="project-hero">
-      <img src="assets/Milky Way Project Card Image.png" alt="Milky Way Project Image" class="project-hero__img" />
+      <img src="../assets/Milky Way/Milky Way Project Card Image.png" alt="Milky Way Project Image" class="project-hero__img" />
     </div>
 
     <section class="project-section project-section--blue">
@@ -68,7 +69,7 @@
         <h3 class="project-section__heading">Logo</h3>
         <div class="project-section__body">
           <p>For the logo of Milky Way, I wanted to create a logo that was both playful and modern. I experimented with different ideas to achieve this goal. The final idea I had selected was that of a bubble tea that had three dimensional latte art on top which showed it was a cafe. The latte art itself was that of a cat acting like the mascot for the business. Adding the lid on top of the three dimensional latte art cat created the illusion of an astronaut helmet to go with the space vibe which was elevated with more space motifs.</p>
-          <img src="assets/Milky Way Logo.svg" alt="Milky Way logo and wordmark" class="project-section__img" />
+          <img src="../assets/Milky Way/Milky Way Logo.svg" alt="Milky Way logo and wordmark" class="project-section__img" />
         </div>
       </div>
     </section>
@@ -78,7 +79,7 @@
         <h3 class="project-section__heading">Colour Scheme</h3>
         <div class="project-section__body">
           <p>The colour scheme for Milky Way was designed to be soft, inviting, and reminiscent of a dreamy galaxy hence why a monochromatic violet colour scheme was chosen. This was my first time working with Pantone so I was thrown off a bit when realizing there were colour shifts colours that came from hexadecimal digits. Either way the difference between each was subtle and the result still came out spectacular.</p>
-          <img src="assets/Milky Way Colour Scheme.svg" alt="Milky Way colour scheme" class="project-section__img" />
+          <img src="../assets/Milky Way/Milky Way Colour Scheme.svg" alt="Milky Way colour scheme" class="project-section__img" />
         </div>
       </div>
     </section>
@@ -88,7 +89,7 @@
         <h3 class="project-section__heading">Typography</h3>
         <div class="project-section__body">
           <p>The typography for Milky Way in both variations of the wordmarks and the posters themselves use either MuseoModerno in the font weight medium or Cascadia Code in the font weight SemiBold. These two fonts were chosen to give a space vibe that also had a touch of science fiction to elevate the design and the concept. These fonts would later be used in various ways for the text featured in the poster.</p>
-          <img src="assets/Milky Way Typography.svg" alt="Milky Way typography" class="project-section__img" />
+          <img src="../assets/Milky Way/Milky Way Typography.svg" alt="Milky Way typography" class="project-section__img" />
         </div>
       </div>
     </section>
@@ -98,13 +99,13 @@
         <h3 class="project-section__heading">Bubble Tea Posters</h3>
         <div class="project-section__body">
           <p>After the creation of the logos, deciding on a colour scheme and coming up with typography, we would use the logo and wordmark we made to create a business poster with two other variations. The first iteration is the one far left which features ube milk tea. I chose ube milk tea since I am Filipino (but I was born and raised in Canada) so I thought that would be a fun touch and also add some uniqueness as most people think of taro when they think of a violet coloured bubble tea at first instead of ube (both are purple root vegetables that can be found in Southeast Asia). The design concept is supposed to be that the bubble tea is a new galaxy being discovered with all the ingredients that make the drink now making the galaxy showcasing how Milky Way makes drinks that are out of this world. The image of the bubble tea was masked out using Adobe Photoshop. When making two other variations I wanted to keep the monochromatic colour scheme so I settled on doing one for a strawberry milk tea and a mint chocolate milk tea to complete my trio of Milky Way promotional posters.</p>
-          <img src="assets/Milky Way Bubble Tea Posters.svg" alt="Milky Way bubble tea posters" class="project-section__img" />
+          <img src="../assets/Milky Way/Milky Way Bubble Tea Posters.svg" alt="Milky Way bubble tea posters" class="project-section__img" />
         </div>
       </div>
     </section>
 
     <div class="project-footer-cta">
-        <a href="portfolio.html" class="project-btn">Back To Portfolio?</a>
+        <a href="../pages/portfolio.html" class="project-btn" data-cursor="view" data-label="Go Back To Portfolio?">Back To Portfolio?</a>
     </div>
 
   </main>
@@ -115,18 +116,20 @@
       <h4>About Me</h4>
       <p>I am a concept driven and aesthetic focused designer who understands how to apply creativity and logic to create unique and playful brands, identities, and worldviews using digital art, media, and design software.</p>
       <p>I can be contacted through email at kyleadriantria01@gmail.com</p>
-      <a href="https://www.linkedin.com/in/kyle-tria-987b28381" class="footer__linkedin" aria-label="LinkedIn">
-        <img src="assets/LinkedIn Logo.svg" alt="LinkedIn" />
+      <a href="https://www.linkedin.com/in/kyle-tria-987b28381" class="footer__linkedin" aria-label="LinkedIn" data-cursor="view" data-label="View LinkedIn?">
+        <img src="../assets/Index/LinkedIn Logo.svg" alt="LinkedIn" />
       </a>
     </div>
 
     <div class="footer__nav">
-      <h4>Portfolio</h4>
+      <h4>
+        <a href="pages/portfolio.html" data-cursor="view" data-label="View Portfolio?">Portfolio</a>
+      </h4>
       <ul class="footer__nav-list">
-        <li><a href="youniverse.html">Youniverse</a></li>
-        <li><a href="berrygood.html">Berry Good</a></li>
-        <li><a href="sunnysideup.html">Sunny Side Up</a></li>
-        <li><a href="milkyway.html">Milky Way</a></li>
+        <li><a href="../pages/youniverse.html" data-cursor="view" data-label="View Youniverse?">Youniverse</a></li>
+        <li><a href="../pages/berrygood.html" data-cursor="view" data-label="View Berry Good?">Berry Good</a></li>
+        <li><a href="../pages/sunnysideup.html" data-cursor="view" data-label="View Sunny Side Up?">Sunny Side Up</a></li>
+        <li><a href="../pages/milkyway.html" data-cursor="view" data-label="View Milky Way?">Milky Way</a></li>
       </ul>
     </div>
     
@@ -134,7 +137,7 @@
 
   </footer>
 
-  <script src="cursor.js"></script>
+  <script src="../cursor/cursor.js"></script>
 
   <script>
     function typeElement(element, delay = 0) {
