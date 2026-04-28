@@ -40,13 +40,13 @@
 
 .star-cursor__mouth {
   fill: none;
-  stroke: var(--color-blue);
+  stroke: var(--primary);
   stroke-width: 3.5px;
   stroke-linecap: round;
 }
 
 .star-cursor--soon .star-cursor__mouth {
-  fill: var(--color-blue);
+  fill: var(--primary);
   stroke: none;
 }
 
@@ -87,14 +87,14 @@
 }
 
 .speech-bubble__rect {
-  fill: var(--color-light);
-  stroke: var(--color-blue);
+  fill: var(--background);
+  stroke: var(--primary);
   stroke-width: 3px;
 }
 
 .speech-bubble__text {
-  fill: var(--color-blue);
-  font-family: var(--font-body);
+  fill: var(--primary);
+  font-family: var(--font);
   font-size: 16px;
   letter-spacing: 2.5px;
 }
